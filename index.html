@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Adventure Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="welcome-screen">
+  <h1>Welcome to Adventure</h1>
+  <p>Press ENTER to begin...</p>
+</div>
+<div id="exit-screen">
+  <h1>See you later</h1>
+</div>
+
+  <div id="game">
+
+    <!-- HERO -->
+    <img id="character" src="hero2.png" alt="Hero">
+
+    <!-- PLAYER HP -->
+    <div id="player-hp" class="hp-box">
+      <div class="hp-text">Player</div>
+      <div class="hp-bar"><div id="player-hp-fill"></div></div>
+    </div>
+
+    <!-- ENEMY HP -->
+    <div id="enemy-hp" class="hp-box" style="display:none;">
+      <div class="hp-text" id="enemy-name">Enemy</div>
+      <div class="hp-bar"><div id="enemy-hp-fill"></div></div>
+    </div>
+
+    <!-- STORY BOX -->
+    <div id="story-box">
+      <span id="story-text">Loading story...</span>
+      <div id="choices">
+        <button onclick="sendChoice('attack')">⚔ Attack</button>
+        <button onclick="sendChoice('explore')">🧭 Explore</button>
+        <button onclick="sendChoice('talk')">💬 Talk</button>
+        <button onclick="sendChoice('move')">🚶 Move</button>
+        <button onclick="stopTyping()">⏹ Stop</button>
+        <button onclick="exitGame()">Exit</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
